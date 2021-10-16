@@ -57,18 +57,35 @@ An application of the code is attached to this page under the name:
 
 [**implementation.py**]()
 
-The examples and the outputs are also attached here: [examples]() & [outputs]().
+The examples and the outputs are also attached here: [examples](https://github.com/EtzionR/Polynomial-Regression-Optimizer/tree/main/examples) & [outputs](https://github.com/EtzionR/Polynomial-Regression-Optimizer/tree/main/pictures).
 
 
 ## Example for using the code
 To use this code, you just need to import it as follows:
 ``` sh
+# import code
+from polyr import PolyR
+import numpy as np
 
+# load data
+train = np.load('train.npy')
+test  = np.load('test.npy')
+
+# define variables
+max_p   = 30
+cv      = 7
+x_test  = test[:,0]
+x_train = train[:,0]
+y_train = train[:,1]
+
+# using the code
+y_prediction = PolyR(max_p = max_p,cv = cv).fit(x_train,y_train).predict(x_test)
 ```
 
 When the variables displayed are:
 
-**aaa:** aaa
+**max_p:** maximum polynomial degree to check
+**cv:** k value for k-folds cross validation (defualt = 5)
 
 ## License
 MIT © [Etzion Harari](https://github.com/EtzionR)
