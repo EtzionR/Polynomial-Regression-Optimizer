@@ -25,7 +25,7 @@ Unfortunately, it is **not possible** to know what is the rank of the polynomial
 
 ![opt](https://github.com/EtzionR/Polynomial-Regression-Optimizer/blob/main/pictures/curve.gif)
 
-As can be seen, each degree of polynomial leads to other errors value (in our case RMSE). In our case, the values that lead to the best results seem to be between 15 and 20. This means that the [**polyr**](https://github.com/EtzionR/Polynomial-Regression-Optimizer/blob/main/polyr.py) code will choose the betas vector that are based on the optimal polynomial degree.
+As can be seen, each degree of polynomial leads to other errors value (in our case RMSE). In our case, the values that lead to the best results seem to be between 15 and 20. This means that the [**polyr**](https://github.com/EtzionR/Polynomial-Regression-Optimizer/blob/main/polyr.py) code will choose the betas vector that are based on the optimal polynomial degree. All that remains for the user is to define the range of values for which the various models will be tested. The range can be set using the **max_p** parameter. To prevent overfitting, the code uses the **k-folds cross validation** method, where its value can be adjusted via the **cv** parameter (default = 5)
 
 In addition, the [**polyr**](https://github.com/EtzionR/Polynomial-Regression-Optimizer/blob/main/polyr.py) code has inside plot function to display the error results of each tested model. To use this function all you have to do is follow the following example code:
 
