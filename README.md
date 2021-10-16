@@ -89,6 +89,7 @@ y_prediction = PolyR(max_p = max_p,cv = cv).fit(x_train,y_train).predict(x_test)
 When the variables displayed are:
 
 **max_p:** maximum polynomial degree to check
+
 **cv:** k value for k-folds cross validation (defualt = 5)
 
 ## License
