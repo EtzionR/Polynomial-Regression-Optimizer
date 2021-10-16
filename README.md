@@ -2,7 +2,7 @@
 A regression model that find the optimal polynomial-degree for the input data
 
 ## Overview
-Polynomial regression is a tool that allows us to find a simple model that fits between our features and the data we want to predict. In contrast to the simple linear model, polynomial regression can predict complex and diverse functions, as can be seen in the following example:
+Polynomial regression is a statistical **machine learning** tool tool that allows us to find a simple model that fits between our features and the data we want to predict. In contrast to the simple linear model, polynomial regression can predict complex and diverse functions. This feature makes polynomial regression a useful tool in the field of Machine Learning. We can be seen example of fitting curve using Polynomial Regression:
 
 ![fit](https://github.com/EtzionR/Polynomial-Regression-Optimizer/blob/main/pictures/fitting.png)
 
