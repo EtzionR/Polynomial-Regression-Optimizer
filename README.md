@@ -4,7 +4,7 @@ A regression model that find the optimal polynomial-degree for the input data
 ## Overview
 Polynomial regression is a tool that allows us to find a simple model that fits between our features and the data we want to predict. In contrast to the simple linear model, polynomial regression can predict complex and diverse functions, as can be seen in the following example:
 
-[fit](https://github.com/EtzionR/Polynomial-Regression-Optimizer/blob/main/pictures/fitting.png)
+![fit](https://github.com/EtzionR/Polynomial-Regression-Optimizer/blob/main/pictures/fitting.png)
 
 Polynomial regression is a simple **extension of the familiar linear model**. As we know, the simple linear model fit a **beta** vector to the matrix of X values, so that they give a prediction to the Y values. The matrix shape can be in a high dimension or also in dimension 1 (vector). In the case of polynomial regression, the model receives vector X and vector Y. Then, the model converts vector x to a matrix, so that each column represents a different rank of the polynomial degree. This means that each column in the matrix is a version of the vector x values under a different power (0,1,... until the polynom degree). Now, we can just use the matrix in the familiar **multi-dimensional** linear model. The model allows us to find a beta vector in dimension P (the polynomial degree) that matches the data to the corresponding Y values.
 We can display the Linear-Polynomial Model as follow:
@@ -25,6 +25,23 @@ Unfortunately, it is **not possible** to know what is the rank of the polynomial
 
 ![opt](https://github.com/EtzionR/Polynomial-Regression-Optimizer/blob/main/pictures/curve.gif)
 
+As can be seen, each degree of polynomial leads to other errors value (in our case RMSE). In our case, the values that lead to the best results seem to be between 15 and 20. This means that the [**polyr**](https://github.com/EtzionR/Polynomial-Regression-Optimizer/blob/main/polyr.py) code will choose the betas vector that are based on the optimal polynomial degree.
+
+In addition, the [**polyr**](https://github.com/EtzionR/Polynomial-Regression-Optimizer/blob/main/polyr.py) code has inside plot function to display the error results of each tested model. To use this function all you have to do is follow the following example code:
+
+``` sh
+# import code
+from polyr import PolyR
+import numpy as np
+
+# load data
+matrix = np.load('matrix.npy')
+x, y   = matrix[:,0], matrix[:,1]
+
+# using the code
+PolyR(max_p=28).fit(x,y).plot_rmse()
+```
+![plot](https://github.com/EtzionR/Polynomial-Regression-Optimizer/blob/main/pictures/rmse.png)
 
 
 ## Libraries
