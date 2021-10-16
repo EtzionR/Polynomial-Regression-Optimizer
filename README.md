@@ -39,7 +39,7 @@ matrix = np.load('matrix.npy')
 x, y   = matrix[:,0], matrix[:,1]
 
 # using the code
-PolyR(max_p=28).fit(x,y).plot_rmse()
+PolyR(max_p=29).fit(x,y).plot_rmse()
 ```
 ![plot](https://github.com/EtzionR/Polynomial-Regression-Optimizer/blob/main/pictures/rmse.png)
 
