@@ -43,6 +43,7 @@ PolyR(max_p=29).fit(x,y).plot_rmse()
 ```
 ![plot](https://github.com/EtzionR/Polynomial-Regression-Optimizer/blob/main/pictures/rmse.png)
 
+All mathematical calculations performed in the code are implemented using the **numpy** library. With the use of this library it is possible to ensure efficient realization of the various regressive models and quickly find the appropriate polynomial degree.
 
 ## Libraries
 The code uses the following library in Python:
