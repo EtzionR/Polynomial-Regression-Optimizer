@@ -88,10 +88,11 @@ class PolyR:
         plot rmse result for each polynom degree
         :param size: plot size (default: 10)
         """
-        vlu = self.scores.values()
+        vlu = [*self.scores.values()]
+        axe = [*self.scores.keys()]
         plt.figure(figsize=(size, size * .6))
         plt.title(f'RMSE for each Polynomial degree:\n[Optimal degree = {self.p}, range from 1 to {self.max_p}]', fontsize=14)
-        plt.plot(self.scores.keys(), vlu, color='r', label='RMSE')
+        plt.plot(axe, vlu, color='r', label='RMSE')
         plt.plot([self.p, self.p], [min(vlu), max(vlu)], color='k', linestyle='dotted', label='Minimum RMSE')
         plt.xlabel('Polynomial degree', fontsize=12)
         plt.ylabel('RMSE', fontsize=12)
