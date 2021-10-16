@@ -8,7 +8,7 @@ The Linear-Polynomial Model:
 
 When:
 
-<img src="https://latex.codecogs.com/svg.image?p^{1\times&space;P},&space;\beta^{P\times&space;1},&space;X^{n\times&space;P},&space;\varepsilon^{1\times&space;n},&space;Y^{n\times&space;1}&space;&space;" title="p^{1\times P}, \beta^{P\times 1}, X^{n\times P}, \varepsilon^{1\times n}, Y^{n\times 1} " />
+<img src="https://latex.codecogs.com/svg.image?p^{1\times&space;P},&space;\beta^{P\times&space;1},&space;(X^{P})^{n\times&space;P},&space;\varepsilon^{1\times&space;n},&space;Y^{n\times&space;1}&space;&space;" title="p^{1\times P}, \beta^{P\times 1}, X^{n\times P}, \varepsilon^{1\times n}, Y^{n\times 1} " />
 
 <img src="https://latex.codecogs.com/svg.image?\varepsilon&space;=&space;N(0,\sigma)" title="\varepsilon = N(0,\sigma)" />,
 
